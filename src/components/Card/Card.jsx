@@ -2,7 +2,7 @@ import React from "react";
 import "./Card.css";
 const Card = ({ userData }) => {
   return (
-    <div className="card grid grid-cols-5 gap-4 bg-white p-8 rounded-lg shadow-lg">
+    <div className="card grid grid-cols-5 gap-4 bg-white p-2 lg:p-8 rounded-lg shadow-lg">
       <div className="col-span-2">
         <img
           src={userData.picture.large}
@@ -16,14 +16,15 @@ const Card = ({ userData }) => {
           {userData.name.first} {userData.name.last}
         </h2>
 
-        <div className="grid grid-rows-2 gap-2">
+        <div className="grid grid-rows-2 lg:gap-2">
           <p className=" text-medium font-semibold text-gray-600 ">
-            {" "}
             <strong>Gender:</strong> {userData.gender}
           </p>
           <p className="text-medium font-semibold text-gray-600 ">
-            {" "}
-            <strong>Phone Number:</strong> {userData.phone}
+            {/* <strong>Phone Number:</strong>  */}
+            <strong className="lg:hidden">P.No:</strong>
+            <strong className="hidden lg:inline">Phone Number:</strong>{" "}
+            {userData.phone}
           </p>
         </div>
       </div>
