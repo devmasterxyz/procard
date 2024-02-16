@@ -1,9 +1,8 @@
 import React from "react";
-
+import "./Card.css";
 const Card = ({ userData }) => {
   return (
-    <div className="grid grid-cols-5 gap-4 bg-white p-8 rounded-lg shadow-lg">
-      {/* Image on the left (40%) */}
+    <div className="card grid grid-cols-5 gap-4 bg-white p-8 rounded-lg shadow-lg">
       <div className="col-span-2">
         <img
           src={userData.picture.large}
